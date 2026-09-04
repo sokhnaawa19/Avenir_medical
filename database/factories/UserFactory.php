@@ -1,0 +1,31 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+
+/**
+ * @extends Factory<\App\Models\User>
+ */
+class UserFactory extends Factory
+{
+    public function definition(): array
+    {
+        return [
+            'name' => fake()->name(),
+            'email' => fake()->unique()->safeEmail(),
+            'email_verified_at' => now(),
+            'password' => 'password',
+            'phone' => fake()->numerify('77 ### ## ##'),
+            'city' => 'Dakar',
+            'is_admin' => false,
+            'remember_token' => Str::random(10),
+        ];
+    }
+
+    public function admin(): static
+    {
+        return $this->state(fn (array $attributes): array => ['is_admin' => true]);
+    }
+}
