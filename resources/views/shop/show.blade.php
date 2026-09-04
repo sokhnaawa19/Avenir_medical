@@ -94,7 +94,7 @@
                                 <button type="button" onclick="ajusterQuantite(1)" aria-label="{{ __('site.augmenter') }}">+</button>
                             </div>
 
-                            <button class="btn btn-primary" type="submit">@include('partials.icon', ['name' => 'cart']) Ajouter au panier</button>
+                            <button class="btn btn-primary" type="submit">@include('partials.icon', ['name' => 'cart']) {{ __('site.ajouter_au_panier') }}</button>
                         </form>
                     @endif
 

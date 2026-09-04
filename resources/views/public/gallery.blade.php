@@ -7,7 +7,7 @@
     @include('partials.page-hero', [
         'title' => setting('gallery_page_title'),
         'text' => setting('gallery_page_text'),
-        'crumb' => 'Galerie',
+        'crumb' => __('site.galerie'),
     ])
 
     <section>

@@ -15,7 +15,7 @@ class Post extends Model
     use HasTranslations;
 
     /** Champs proposés à la traduction. */
-    protected array $translatable = ['title', 'excerpt', 'body'];
+    protected array $translatable = ['title', 'excerpt', 'body', 'category'];
 
     protected string $slugSource = 'title';
 

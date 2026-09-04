@@ -40,7 +40,7 @@
     @auth
         @if (auth()->user()->isAdmin())
             <p class="video-warning">
-                @include('partials.icon', ['name' => 'alert']) Ce lien vidéo n'est pas reconnu : <code>{{ $url }}</code><br>
+                @include('partials.icon', ['name' => 'alert']) {{ __('site.ce_lien_video_n_est_pas_reconnu') }}<code>{{ $url }}</code><br>
                 Utilisez un lien YouTube, Vimeo, ou un fichier .mp4 / .webm / .mov.
             </p>
         @endif

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('partials.page-hero', ['title' => 'Mon panier', 'crumb' => 'Panier'])
+    @include('partials.page-hero', ['title' => __('site.mon_panier'), 'crumb' => __('site.panier')])
 
     <section>
         <div class="wrap">

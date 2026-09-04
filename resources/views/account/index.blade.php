@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('partials.page-hero', ['title' => 'Mon compte', 'crumb' => 'Mon compte'])
+    @include('partials.page-hero', ['title' => __('site.mon_compte'), 'crumb' => __('site.mon_compte')])
 
     <section>
         <div class="wrap" style="max-width:820px">
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <h3 style="font-family:Sora;color:var(--teal-dark);margin:34px 0 16px">@include('partials.icon', ['name' => 'box']) Mes commandes</h3>
+            <h3 style="font-family:Sora;color:var(--teal-dark);margin:34px 0 16px">@include('partials.icon', ['name' => 'box']) {{ __('site.mes_commandes') }}</h3>
 
             @if ($orders->isEmpty())
                 <p class="text-muted">

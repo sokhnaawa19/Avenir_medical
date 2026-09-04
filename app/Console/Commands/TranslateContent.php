@@ -32,8 +32,10 @@ class TranslateContent extends Command
 {
     /** Réglages qui ne doivent jamais être traduits. */
     private const CLES_JAMAIS_TRADUITES = [
-        'site_name', 'site_baseline', 'whatsapp_1_label', 'whatsapp_2_label',
-        'whatsapp_3_label', 'address', 'phone_1', 'phone_2', 'phone_3',
+        // Nom de l'entreprise, adresse et numéros : jamais traduits.
+        // Les intitulés de service (« Laboratoires & équipements ») le sont,
+        // eux, puisqu'ils décrivent un service et non un nom propre.
+        'site_name', 'site_baseline', 'address', 'phone_1', 'phone_2', 'phone_3',
     ];
 
     protected $signature = 'site:traduire
@@ -87,7 +89,47 @@ class TranslateContent extends Command
                 foreach ($element->translatableFields() as $champ) {
                     $original = $element->raw($champ);
 
-                    if (blank($original) || ! is_string($original)) {
+                    if (blank($original)) {
+                        continue;
+                    }
+
+                    // Champ en liste (équipements) : on traduit chaque texte
+                    // en conservant la structure.
+                    if (is_array($original) || $this->ressembleAUneListe($original)) {
+                        $liste = is_array($original) ? $original : json_decode($original, true);
+
+                        if (! is_array($liste)) {
+                            continue;
+                        }
+
+                        $existante = $element->translationFor($champ, $locale);
+
+                        if (filled($existante) && ! $this->option('tout')) {
+                            continue;
+                        }
+
+                        $aTraduire++;
+
+                        if ($essai) {
+                            continue;
+                        }
+
+                        try {
+                            $element->setTranslation(
+                                $champ,
+                                $locale,
+                                json_encode($this->traduireListe($liste, $traducteur, $locale), JSON_UNESCAPED_UNICODE)
+                            );
+                            $traduits++;
+                        } catch (Throwable $e) {
+                            $erreurs++;
+                            $this->warn('    '.$champ.' : '.$e->getMessage());
+                        }
+
+                        continue;
+                    }
+
+                    if (! is_string($original)) {
                         continue;
                     }
 
@@ -282,6 +324,34 @@ class TranslateContent extends Command
         return $crees;
     }
 
+    /** Le texte enregistré est-il en réalité une liste JSON ? */
+    private function ressembleAUneListe(mixed $valeur): bool
+    {
+        return is_string($valeur)
+            && str_starts_with(trim($valeur), '[')
+            && is_array(json_decode($valeur, true));
+    }
+
+    /**
+     * Traduit chaque texte d'une liste, quelle que soit sa profondeur.
+     */
+    private function traduireListe(array $liste, Translator $traducteur, string $locale): array
+    {
+        foreach ($liste as $cle => $valeur) {
+            if (is_array($valeur)) {
+                $liste[$cle] = $this->traduireListe($valeur, $traducteur, $locale);
+
+                continue;
+            }
+
+            if (is_string($valeur) && filled($valeur)) {
+                $liste[$cle] = $traducteur->translate($valeur, $locale);
+            }
+        }
+
+        return $liste;
+    }
+
     /** Combien de réglages manquent encore en base ? */
     private function compterReglagesManquants(array $exclus): int
     {
@@ -311,7 +381,12 @@ class TranslateContent extends Command
     {
         // Ne restent en français que le nom, les coordonnées et les liens :
         // les titres de vidéos et les textes de référencement se traduisent.
-        $exclus = ['contact', 'reseaux', 'identite'];
+        // Le nom et les liens ne se traduisent pas. Les coordonnées non plus,
+        // mais elles sont déjà protégées par leur clé (adresse, téléphones) ou
+        // par leur type (email, url) : les horaires, eux, doivent être traduits.
+        // Seuls les liens restent hors traduction ; le nom de l'entreprise
+        // est protégé individuellement par CLES_JAMAIS_TRADUITES.
+        $exclus = ['reseaux'];
         $compte = 0;
 
         if ($essai) {

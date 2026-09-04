@@ -9,7 +9,6 @@ use App\Models\Agency;
 use App\Models\Establishment;
 use App\Models\GalleryPhoto;
 use App\Models\Partner;
-use App\Models\Subsidiary;
 use App\Models\Training;
 use App\Models\ProcessStep;
 use App\Models\Product;
@@ -45,10 +44,9 @@ class HomeController extends Controller
                 'establishments' => Establishment::query()->active()->featured()->ordered()->take(4)->get(),
                 // La réalisation la plus parlante, présentée en grand.
                 'project' => Establishment::query()->active()->flagship()->ordered()->first(),
-                'subsidiaries' => Subsidiary::query()->active()->ordered()->take(4)->get(),
+                'agencies' => Agency::query()->active()->ordered()->get(),
                 'photos' => GalleryPhoto::query()->active()->ordered()->take(6)->get(),
                 'trainings' => Training::query()->active()->with(['photos', 'translations'])->ordered()->take(3)->get(),
-                'agencies' => Agency::query()->active()->ordered()->get(),
             ];
         });
 

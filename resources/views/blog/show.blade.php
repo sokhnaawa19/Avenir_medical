@@ -7,7 +7,7 @@
 
     @include('partials.page-hero', [
         'title' => $post->title,
-        'text' => 'Publié le '.optional($post->published_at)->translatedFormat('d F Y').($post->category ? ' · '.$post->category : ''),
+        'text' => __('site.publie_le').optional($post->published_at)->translatedFormat('d F Y').($post->category ? ' · '.$post->category : ''),
         'crumb' => '<a href="'.lroute('blog.index').'">Blog</a> › Article',
     ])
 

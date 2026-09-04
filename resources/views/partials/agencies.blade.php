@@ -22,7 +22,7 @@
 <section class="expansion-section" id="developpement">
     <div class="wrap">
         <div class="sec-head center">
-            <span class="eyebrow">Notre développement.</span>
+            <span class="eyebrow">{{ __('site.notre_developpement') }}</span>
             <h2>{{ setting('expansion_title') }}</h2>
             <p>{{ setting('expansion_text') }}</p>
         </div>
@@ -89,7 +89,7 @@
 
                     @if ($projetsSousRegion->isNotEmpty())
                         <div class="ambition-col">
-                            <h4>@include('partials.icon', ['name' => 'globe']) Sous-région</h4>
+                            <h4>@include('partials.icon', ['name' => 'globe']) {{ __('site.sous_region') }}</h4>
                             <ul class="ambition-list">
                                 @foreach ($projetsSousRegion as $projet)
                                     <li>

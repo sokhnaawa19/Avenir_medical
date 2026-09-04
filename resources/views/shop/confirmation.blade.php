@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('partials.page-hero', ['title' => 'Merci pour votre commande !', 'crumb' => 'Commande confirmée'])
+    @include('partials.page-hero', ['title' => __('site.merci_pour_votre_commande'), 'crumb' => __('site.commande_confirmee')])
 
     <section>
         <div class="wrap">

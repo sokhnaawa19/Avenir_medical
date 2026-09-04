@@ -5,9 +5,9 @@
 @section('content')
 
     @include('partials.page-hero', [
-        'title' => 'Qui sommes-nous ?',
+        'title' => __('site.qui_sommes_nous'),
         'text' => setting('site_baseline'),
-        'crumb' => "L'entreprise",
+        'crumb' => __('site.l_entreprise'),
     ])
 
     <section>
@@ -105,72 +105,9 @@
             </div>
         </section>
     @endif
-
-    {{-- Le groupe : la maison mère et ses entreprises --}}
-    @if ($subsidiaries->isNotEmpty())
-        <section id="groupe" style="padding-top:0">
-            <div class="wrap">
-                <div class="sec-head center">
-                    <span class="eyebrow">{{ __('site.le_groupe') }}</span>
-                    <h2>{{ setting('group_title') }}</h2>
-                    <p>{{ setting('group_text') }}</p>
-                </div>
-
-                <div class="group-parent">
-                    <span class="group-parent-badge">{{ __('site.maison_mere') }}</span>
-                    <h2 translate="no">{{ setting('site_name') }}</h2>
-                    <p>{{ setting('group_parent_text') }}</p>
-                </div>
-
-                <div class="group-branches" aria-hidden="true"></div>
-
-                <div class="group-grid">
-                    @foreach ($subsidiaries as $entreprise)
-                        <article class="group-card" style="--marque:{{ $entreprise->color ?: 'var(--teal)' }}">
-                            @if ($entreprise->image)
-                                <div class="group-card-visual">
-                                    <img src="{{ media($entreprise->image) }}" alt="{{ $entreprise->name }}"
-                                         width="600" height="360" loading="lazy" decoding="async">
-                                </div>
-                            @endif
-
-                            <div class="group-card-body">
-                                <div class="group-card-logo">
-                                    @if ($entreprise->logo)
-                                        <img src="{{ media($entreprise->logo) }}" alt="{{ $entreprise->name }}"
-                                             width="150" height="70" loading="lazy" decoding="async">
-                                    @else
-                                        <span class="group-initials">{{ $entreprise->initials() }}</span>
-                                    @endif
-                                </div>
-
-                                <h3 translate="no">{{ $entreprise->name }}</h3>
-                                @if ($entreprise->tagline)
-                                    <p class="group-tagline">{{ $entreprise->tagline }}</p>
-                                @endif
-
-                                @if ($entreprise->activity || $entreprise->founded_year)
-                                    <div class="group-meta">
-                                        @if ($entreprise->activity)<span class="badge-soft">{{ $entreprise->activity }}</span>@endif
-                                        @if ($entreprise->founded_year)<span class="badge-soft">Depuis {{ $entreprise->founded_year }}</span>@endif
-                                    </div>
-                                @endif
-
-                                @if ($entreprise->description)
-                                    <p>{{ $entreprise->description }}</p>
-                                @endif
-
-                                @if ($entreprise->website)
-                                    <a class="link" href="{{ $entreprise->website }}" target="_blank" rel="noopener">
-                                        Découvrir {{ $entreprise->name }} →
-                                    </a>
-                                @endif
-                            </div>
-                        </article>
-                    @endforeach
-                </div>
-            </div>
-        </section>
+    {{-- Notre développement --}}
+    @if ($agencies->isNotEmpty())
+        @include('partials.agencies', ['agencies' => $agencies])
     @endif
 
 

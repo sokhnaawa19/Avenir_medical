@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('partials.page-hero', ['title' => 'Mot de passe oublié', 'crumb' => 'Mon compte'])
+    @include('partials.page-hero', ['title' => __('site.mot_de_passe_oublie'), 'crumb' => __('site.mon_compte')])
 
     <section>
         <div class="wrap" style="max-width:520px">

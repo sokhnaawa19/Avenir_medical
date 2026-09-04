@@ -57,9 +57,7 @@
         <p style="max-width:60ch;margin:0 auto 14px">{{ setting('footer_text') }}</p>
         <p style="margin-bottom:10px">
             <a class="link" href="{{ lroute('gallery') }}">{{ __('site.galerie_photos') }}</a>
-            {{ __('site.nbsp_nbsp') }}
-            <a class="link" href="{{ lroute('company') }}#groupe">{{ __('site.le_groupe') }}</a>
-            {{ __('site.nbsp_nbsp') }}
+            {{ __('site.nbsp_nbsp') }}{{ __('site.nbsp_nbsp') }}
             <a class="link" href="{{ lroute('legal') }}">{{ __('site.mentions_legales') }}</a>
             {{ __('site.nbsp_nbsp') }}
             <a class="link" href="{{ lroute('terms') }}">{{ __('site.conditions_generales_de_vente') }}</a>

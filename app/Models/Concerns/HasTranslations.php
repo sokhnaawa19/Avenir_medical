@@ -58,6 +58,26 @@ trait HasTranslations
     {
         $valeur = parent::getAttribute($key);
 
+        // Champs en liste (équipements d'un domaine, par exemple) :
+        // la traduction est enregistrée au format JSON.
+        if (is_array($valeur) && in_array($key, $this->translatableFields(), true)) {
+            $locale = app()->getLocale();
+
+            if ($locale === config('app.fallback_locale', 'fr')) {
+                return $valeur;
+            }
+
+            $traduction = $this->translationFor($key, $locale);
+
+            if (blank($traduction)) {
+                return $valeur;
+            }
+
+            $decode = json_decode($traduction, true);
+
+            return is_array($decode) ? $decode : $valeur;
+        }
+
         if (! is_string($valeur) || $valeur === '') {
             return $valeur;
         }

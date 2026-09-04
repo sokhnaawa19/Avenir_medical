@@ -16,7 +16,7 @@ class Product extends Model
     use Sortable;
 
     /** Champs proposés à la traduction. */
-    protected array $translatable = ['name', 'short_description', 'description'];
+    protected array $translatable = ['name', 'short_description', 'description', 'box_label'];
 
     protected $fillable = [
         'category_id',

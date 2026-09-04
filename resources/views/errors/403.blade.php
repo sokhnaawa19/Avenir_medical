@@ -3,7 +3,7 @@
 @section('title', 'Accès refusé — '.setting('site_name'))
 
 @section('content')
-    @include('partials.page-hero', ['title' => 'Accès refusé'])
+    @include('partials.page-hero', ['title' => __('site.acces_refuse')])
 
     <section>
         <div class="wrap vide">

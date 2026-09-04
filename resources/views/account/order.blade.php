@@ -5,7 +5,7 @@
 @section('content')
 
     @include('partials.page-hero', [
-        'title' => 'Commande '.$order->reference,
+        'title' => __('site.commande').$order->reference,
         'crumb' => '<a href="'.route('account.index').'">'.__('site.mon_compte').'</a> › Commande',
     ])
 

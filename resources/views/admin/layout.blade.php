@@ -77,14 +77,11 @@
             <a class="item @if (is_current('admin.trainings.*')) on @endif" href="{{ route('admin.trainings.index') }}">
                 <span class="ic">🎓</span> Formations
             </a>
-            <a class="item @if (is_current('admin.photos.*')) on @endif" href="{{ route('admin.photos.index') }}">
-                <span class="ic">📷</span> Galerie photos
-            </a>
             <a class="item @if (is_current('admin.agencies.*')) on @endif" href="{{ route('admin.agencies.index') }}">
                 <span class="ic">📍</span> Agences
             </a>
-            <a class="item @if (is_current('admin.subsidiaries.*')) on @endif" href="{{ route('admin.subsidiaries.index') }}">
-                <span class="ic">🏢</span> Le groupe
+            <a class="item @if (is_current('admin.photos.*')) on @endif" href="{{ route('admin.photos.index') }}">
+                <span class="ic">📷</span> Galerie photos
             </a>
 
             <div class="group">Gestion</div>

@@ -23,8 +23,17 @@ class BlogController extends Controller
                 ->recent()
                 ->paginate(9)
                 ->withQueryString(),
+            // On garde la valeur d'origine pour filtrer, et la version
+            // traduite pour l'affichage.
             'categories' => Post::query()->published()->whereNotNull('category')
-                ->distinct()->orderBy('category')->pluck('category'),
+                ->orderBy('category')
+                ->get()
+                ->map(fn (Post $article): array => [
+                    'valeur' => $article->raw('category'),
+                    'libelle' => $article->category,
+                ])
+                ->unique('valeur')
+                ->values(),
             'currentCategory' => $category,
         ]);
     }

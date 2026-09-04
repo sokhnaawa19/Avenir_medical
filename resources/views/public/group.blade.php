@@ -8,7 +8,7 @@
     @include('partials.page-hero', [
         'title' => setting('group_title'),
         'text' => setting('group_text'),
-        'crumb' => 'Le groupe',
+        'crumb' => __('site.le_groupe'),
     ])
 
     {{-- La maison mère et ses entreprises --}}
@@ -76,10 +76,5 @@
             @endif
         </div>
     </section>
-
-    {{-- Le développement : agences --}}
-    @if ($agencies->isNotEmpty())
-        @include('partials.agencies', ['agencies' => $agencies])
-    @endif
 
 @endsection

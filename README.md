@@ -1612,3 +1612,176 @@ php artisan site:traduire --interface           # enregistre puis traduit
 
 La simulation indique désormais combien de réglages seraient enregistrés avant
 d'être traduits.
+
+
+---
+
+## 43. Derniers textes traduits
+
+### Les titres de page et les fils d'Ariane
+
+« Qui sommes-nous ? », « Nos domaines d'intervention », « Boutique en ligne »,
+« Blog & actualités », « Contactez-nous »… étaient passés en **paramètre PHP**
+au bandeau de page :
+
+```blade
+@include('partials.page-hero', ['title' => 'Qui sommes-nous ?', 'crumb' => "L'entreprise"])
+```
+
+Mes extractions précédentes ne regardaient que le texte entre balises : ces
+valeurs leur échappaient. **47 textes** ont été repris, dont tous les titres de
+page, les fils d'Ariane et les pages de compte, de commande et d'erreur.
+
+### Les titres accompagnés d'une icône
+
+« Envoyez-nous un message », « Par téléphone », « Par email », « Où nous
+trouver » : le texte suivait un `@include` d'icône sur la même ligne, ce qui le
+faisait rejeter par le filtre d'extraction. Corrigé également.
+
+### Horaires et intitulés WhatsApp
+
+Le groupe `contact` était exclu en bloc, ce qui laissait « Du lundi au samedi,
+8h – 18h » et « Laboratoires & équipements » en français.
+
+Seuls restent protégés désormais : **le nom de l'entreprise, l'adresse et les
+numéros de téléphone** — par leur clé — ainsi que les emails et les liens, par
+leur type. Tout le reste se traduit.
+
+### Bilan
+
+| | Nombre |
+|---|---|
+| Clés de traduction utilisées dans les pages | 238 |
+| Réglages traduits automatiquement | 87 |
+| Réglages laissés en français (noms, coordonnées, images) | 45 |
+
+```bash
+php artisan optimize:clear
+php artisan site:traduire --interface
+```
+
+
+---
+
+## 43. Derniers textes traduits
+
+Trois familles de textes échappaient encore à l'extraction.
+
+### Les titres de page et les fils d'Ariane
+
+« Qui sommes-nous ? », « Nos domaines d'intervention », « Boutique en ligne »,
+« Blog & actualités », « Contactez-nous »… étaient passés en **paramètre PHP** :
+
+```blade
+@include('partials.page-hero', ['title' => 'Qui sommes-nous ?'])
+```
+
+Mon extraction ne cherchait que le texte entre balises HTML. Ces valeurs sont
+désormais traduites elles aussi.
+
+### Les titres accompagnés d'une icône
+
+« Envoyez-nous un message », « Par téléphone », « Par email », « Où nous
+trouver »… se trouvaient juste après un `@include` d'icône, sur la même ligne :
+le filtre les rejetait à cause du caractère `@`.
+
+### Les horaires d'ouverture
+
+Ils appartiennent au groupe *Contact*, qui était exclu en bloc. Or seuls les
+numéros, les emails, l'adresse et la carte doivent rester en français — ils sont
+maintenant protégés individuellement, et les horaires se traduisent.
+
+### Bilan
+
+**239 clés de traduction** sont utilisées dans les pages, toutes présentes dans
+les deux langues.
+
+```bash
+php artisan optimize:clear
+php artisan site:traduire --interface
+```
+
+
+---
+
+## 44. Corrections de traduction et retrait des agences
+
+### Le menu ne se surlignait plus en anglais
+
+En anglais, les routes portent le préfixe `en.` : `blog.index` devient
+`en.blog.index`. La fonction `is_current('blog.*')` ne trouvait donc jamais de
+correspondance, et aucune entrée du menu n'apparaissait comme active.
+
+Elle teste désormais aussi les versions préfixées.
+
+### « Équipements et consommables médicaux à Dakar »
+
+Ce texte est la **signature du site** (`site_baseline`), que j'avais placée dans
+la liste des textes jamais traduits, à côté du nom de l'entreprise. Or c'est une
+phrase commerciale, pas un nom propre : elle se traduit maintenant.
+
+Seul le **nom de l'entreprise** reste protégé, avec l'adresse, la carte et les
+numéros de téléphone.
+
+### Les listes d'équipements et les catégories d'articles
+
+Les équipements d'un domaine sont enregistrés sous forme de **liste**
+(un titre et une description par équipement), et non de simple texte : la
+traduction ne les voyait pas.
+
+Le mécanisme gère désormais les listes, quelle que soit leur profondeur, en
+conservant leur structure. Sont concernés :
+
+* les **équipements** de chaque domaine ;
+* la **catégorie** des articles du blog ;
+* le **conditionnement** des produits (« Carton », « Boîte »…).
+
+### Section « Notre ambition » retirée
+
+À la demande du client, la section des agences et des implantations à venir a été
+retirée :
+
+* du bandeau de la page d'accueil ;
+* de la page « Le groupe » ;
+* du menu de l'administration.
+
+Les données et le composant `partials/agencies` sont conservés : la section peut
+être remise en place plus tard sans rien recréer.
+
+
+---
+
+## 45. Retrait du groupe, retour de l'ambition
+
+### Correction de la demande précédente
+
+J'avais retiré la mauvaise section : c'est **« Le groupe »** qui devait
+disparaître, pas « Notre ambition ».
+
+* La section **« Notre ambition »** est rétablie sur la page d'accueil et
+  la page « Qui sommes-nous », avec ses agences et ses implantations à venir.
+* La section **« Le groupe »** est supprimée : de l'accueil, de la page
+  entreprise, du pied de page et du menu de l'administration. La page
+  `/le-groupe` n'existe plus (son adresse redirige vers « Qui sommes-nous »).
+
+Les données des filiales restent en base : rien n'est perdu si le client
+change d'avis.
+
+### Trois textes encore en français
+
+**« 1 technicien formé »** était écrit directement dans les pages, à l'intérieur
+d'une condition (singulier / pluriel). Les deux formes sont désormais traduites.
+
+**« Équipements et consommables médicaux à Dakar, Sénégal »** — la signature du
+site appartient au groupe *Identité*, qui était exclu en bloc. Seul le **nom de
+l'entreprise** reste protégé désormais ; la signature se traduit.
+
+**Les filtres du blog** affichaient la catégorie telle qu'enregistrée en base.
+Ils affichent maintenant la version traduite, tout en continuant de filtrer sur
+la valeur d'origine — les liens de filtrage restent donc valables dans les deux
+langues.
+
+```bash
+php artisan optimize:clear
+php artisan site:traduire --interface
+```

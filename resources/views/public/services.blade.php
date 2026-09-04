@@ -8,7 +8,7 @@
     @include('partials.page-hero', [
         'title' => setting('services_page_title'),
         'text' => setting('services_page_text'),
-        'crumb' => 'Services & expertise',
+        'crumb' => __('site.services_expertise'),
     ])
 
     {{-- 1. Ce que nous faisons --}}
@@ -143,7 +143,7 @@
                                 @if ($training->participants)
                                     <span class="training-badge">
                                         @include('partials.icon', ['name' => 'wrench']) {{ $training->participants }}
-                                        {{ $training->participants > 1 ? 'techniciens formés' : 'technicien formé' }}
+                                        {{ $training->participants > 1 ? __('site.techniciens_formes') : __('site.technicien_forme') }}
                                     </span>
                                 @endif
 

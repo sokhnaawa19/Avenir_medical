@@ -100,7 +100,7 @@
                                 @if ($training->participants)
                                     <span class="training-badge">
                                         @include('partials.icon', ['name' => 'wrench']) {{ $training->participants }}
-                                        {{ $training->participants > 1 ? 'techniciens formés' : 'technicien formé' }}
+                                        {{ $training->participants > 1 ? __('site.techniciens_formes') : __('site.technicien_forme') }}
                                     </span>
                                 @endif
                             </div>

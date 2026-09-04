@@ -294,7 +294,7 @@
                                 @if ($training->participants)
                                     <span class="training-badge">
                                         @include('partials.icon', ['name' => 'wrench']) {{ $training->participants }}
-                                        {{ $training->participants > 1 ? 'techniciens formés' : 'technicien formé' }}
+                                        {{ $training->participants > 1 ? __('site.techniciens_formes') : __('site.technicien_forme') }}
                                     </span>
                                 @endif
                             </div>
@@ -350,7 +350,6 @@
             </div>
         </section>
     @endif
-
     {{-- Notre ambition régionale --}}
     @if ($agencies->isNotEmpty())
         @php
@@ -363,7 +362,7 @@
             <div class="wrap">
                 <div class="ambition-band-inner">
                     <div>
-                        <span class="eyebrow">{{ __('site.notre_ambition') }}</span>
+                        <span class="eyebrow">Notre ambition</span>
                         <h2>{{ setting('ambition_title') }}</h2>
                         <p>{{ setting('ambition_text') }}</p>
                     </div>
@@ -378,37 +377,6 @@
                             <small>implantations prévues @if ($horizon) d'ici {{ $horizon }} @endif</small>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-    @endif
-    {{-- Le groupe --}}
-    @if ($subsidiaries->isNotEmpty())
-        <section class="reveal group-teaser band-white">
-            <div class="wrap">
-                <div class="sec-head center">
-                    <span class="eyebrow">{{ __('site.le_groupe') }}</span>
-                    <h2>{{ setting('group_title') }}</h2>
-                    <p>{{ setting('group_text') }}</p>
-                </div>
-
-                <div class="group-teaser-grid">
-                    @foreach ($subsidiaries as $entreprise)
-                        <div class="group-chip" style="--marque:{{ $entreprise->color ?: 'var(--teal)' }}">
-                            @if ($entreprise->logo)
-                                <img src="{{ media($entreprise->logo) }}" alt="{{ $entreprise->name }}"
-                                     width="130" height="60" loading="lazy" decoding="async">
-                            @else
-                                <span class="group-initials">{{ $entreprise->initials() }}</span>
-                            @endif
-                            <b translate="no">{{ $entreprise->name }}</b>
-                            <small>{{ $entreprise->activity ?: $entreprise->tagline }}</small>
-                        </div>
-                    @endforeach
-                </div>
-
-                <div class="center mt-3">
-                    <a class="btn btn-primary" href="{{ lroute('company') }}#groupe">{{ __('site.decouvrir_le_groupe') }}</a>
                 </div>
             </div>
         </section>

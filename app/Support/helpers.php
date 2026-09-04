@@ -82,7 +82,23 @@ if (! function_exists('is_current')) {
      */
     function is_current(string ...$patterns): bool
     {
-        return request()->routeIs(...$patterns);
+        // En anglais, les routes portent le préfixe « en. » :
+        // « blog.index » devient « en.blog.index ». On teste donc
+        // aussi la version préfixée, sinon le menu ne se surligne
+        // que sur la version française.
+        $avecLangues = $patterns;
+
+        foreach (config('app.locales', []) as $langue) {
+            if ($langue === config('app.fallback_locale', 'fr')) {
+                continue;
+            }
+
+            foreach ($patterns as $motif) {
+                $avecLangues[] = $langue.'.'.$motif;
+            }
+        }
+
+        return request()->routeIs(...$avecLangues);
     }
 }
 

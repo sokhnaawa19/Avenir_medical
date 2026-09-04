@@ -5,9 +5,9 @@
 @section('content')
 
     @include('partials.page-hero', [
-        'title' => 'Blog & actualités',
+        'title' => __('site.blog_actualites'),
         'text' => setting('blog_text'),
-        'crumb' => 'Blog',
+        'crumb' => __('site.menu.blog'),
     ])
 
     <section>
@@ -18,8 +18,8 @@
                 <div class="shop-tools">
                     <a class="pill @if (! $currentCategory) on @endif" href="{{ lroute('blog.index') }}">{{ __('site.tout') }}</a>
                     @foreach ($categories as $category)
-                        <a class="pill @if ($currentCategory === $category) on @endif"
-                           href="{{ lroute('blog.index', ['categorie' => $category]) }}">{{ $category }}</a>
+                        <a class="pill @if ($currentCategory === $category['valeur']) on @endif"
+                           href="{{ lroute('blog.index', ['categorie' => $category['valeur']]) }}">{{ $category['libelle'] }}</a>
                     @endforeach
                 </div>
             @endif

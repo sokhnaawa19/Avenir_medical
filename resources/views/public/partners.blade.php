@@ -7,9 +7,9 @@
     @php use App\Support\LineList; @endphp
 
     @include('partials.page-hero', [
-        'title' => 'Nos partenaires',
+        'title' => __('site.nos_partenaires'),
         'text' => setting('partners_text'),
-        'crumb' => 'Partenaires',
+        'crumb' => __('site.partenaires'),
     ])
 
     <section>

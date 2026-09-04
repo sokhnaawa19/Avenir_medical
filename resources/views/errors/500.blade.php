@@ -3,7 +3,7 @@
 @section('title', 'Une erreur est survenue')
 
 @section('content')
-    @include('partials.page-hero', ['title' => 'Une erreur est survenue'])
+    @include('partials.page-hero', ['title' => __('site.une_erreur_est_survenue')])
 
     <section>
         <div class="wrap vide">

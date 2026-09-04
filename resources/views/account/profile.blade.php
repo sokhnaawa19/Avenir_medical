@@ -5,7 +5,7 @@
 @section('content')
 
     @include('partials.page-hero', [
-        'title' => 'Mes informations',
+        'title' => __('site.mes_informations'),
         'crumb' => '<a href="'.route('account.index').'">'.__('site.mon_compte').'</a> › Informations',
     ])
 

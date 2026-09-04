@@ -5,7 +5,7 @@
 @section('content')
 
     @include('partials.page-hero', [
-        'title' => 'Finaliser ma commande',
+        'title' => __('site.finaliser_ma_commande'),
         'crumb' => '<a href="'.lroute('cart.index').'">'.__('site.panier').'</a> › Commande',
     ])
 
@@ -15,7 +15,7 @@
 
             @guest
                 <div class="alert alert-success" style="background:var(--tint);color:var(--teal-dark);border-color:#CDE5EC">
-                    @include('partials.icon', ['name' => 'bulb']) Vous pouvez commander sans compte. <a class="link" href="{{ route('login') }}">{{ __('site.connectez_vous') }}</a>
+                    @include('partials.icon', ['name' => 'bulb']) {{ __('site.vous_pouvez_commander_sans_compte') }}<a class="link" href="{{ route('login') }}">{{ __('site.connectez_vous') }}</a>
                     ou <a class="link" href="{{ route('register') }}">'.__('site.creez_un_compte').'</a> '.__('site.pour_suivre_vos_commandes').'
                 </div>
             @endguest
@@ -25,7 +25,7 @@
 
                 <div class="shop-layout">
                     <div class="card">
-                        <h3>@include('partials.icon', ['name' => 'list']) Vos informations de livraison</h3>
+                        <h3>@include('partials.icon', ['name' => 'list']) {{ __('site.vos_informations_de_livraison') }}</h3>
 
                         <div class="grid-2">
                             <div class="field">
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="field">
-                            <label for="email">Email</label>
+                            <label for="email">{{ __('site.form.email') }}</label>
                             <input class="input @error('email') is-invalid @enderror" type="email" id="email" name="email"
                                    value="{{ old('email', auth()->user()->email ?? '') }}">
                             <span class="form-hint">{{ __('site.pour_recevoir_le_suivi_de_votre_commande') }}</span>
@@ -94,11 +94,11 @@
                         @endif
 
                         <div class="field">
-                            <label for="note">Message (facultatif)</label>
+                            <label for="note">{{ __('site.message_facultatif') }}</label>
                             <textarea class="input" id="note" name="note" placeholder="{{ __('site.une_precision_pour_la_livraison') }}">{{ old('note') }}</textarea>
                         </div>
 
-                        <button class="btn btn-primary btn-block" type="submit">@include('partials.icon', ['name' => 'check']) Confirmer ma commande</button>
+                        <button class="btn btn-primary btn-block" type="submit">@include('partials.icon', ['name' => 'check']) {{ __('site.confirmer_ma_commande') }}</button>
                     </div>
 
                     <div class="totaux">

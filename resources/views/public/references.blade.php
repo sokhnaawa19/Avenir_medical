@@ -8,7 +8,7 @@
     @include('partials.page-hero', [
         'title' => setting('references_title'),
         'text' => setting('references_text'),
-        'crumb' => 'Références',
+        'crumb' => __('site.references'),
     ])
 
     <section>

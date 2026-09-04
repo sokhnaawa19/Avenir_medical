@@ -5,9 +5,9 @@
 @section('content')
 
     @include('partials.page-hero', [
-        'title' => 'Contactez-nous',
-        'text' => 'Une question, un devis, un projet ? Écrivez-nous ou appelez-nous.',
-        'crumb' => 'Contact',
+        'title' => __('site.contactez_nous'),
+        'text' => __('site.une_question_un_devis_un_projet_ecrivez_nous'),
+        'crumb' => __('site.menu.contact'),
     ])
 
     <section>
@@ -16,7 +16,7 @@
 
             <div class="grid-2" style="align-items:start">
                 <div class="card">
-                    <h3>@include('partials.icon', ['name' => 'mail']) Envoyez-nous un message</h3>
+                    <h3>@include('partials.icon', ['name' => 'mail']) {{ __('site.envoyez_nous_un_message') }}</h3>
 
                     <form method="POST" action="{{ route('contact.store') }}">
                         @csrf
@@ -64,7 +64,7 @@
 
                 <div>
                     <div class="card mt-2">
-                        <h3>@include('partials.icon', ['name' => 'phone']) Par téléphone</h3>
+                        <h3>@include('partials.icon', ['name' => 'phone']) {{ __('site.par_telephone') }}</h3>
                         <p>
                             @foreach (['phone_1', 'phone_2', 'phone_3'] as $phone)
                                 @if (setting($phone))
@@ -75,12 +75,12 @@
                     </div>
 
                     <div class="card mt-2">
-                        <h3>@include('partials.icon', ['name' => 'mail']) Par email</h3>
+                        <h3>@include('partials.icon', ['name' => 'mail']) {{ __('site.par_email') }}</h3>
                         <p><a class="link" href="mailto:{{ setting('email') }}">{{ setting('email') }}</a></p>
                     </div>
 
                     <div class="card mt-2">
-                        <h3>@include('partials.icon', ['name' => 'pin']) Où nous trouver</h3>
+                        <h3>@include('partials.icon', ['name' => 'pin']) {{ __('site.ou_nous_trouver') }}</h3>
                         <p>{!! nl2br(e((string) setting('address'))) !!}<br>
                             <small class="text-muted">{{ setting('opening_hours') }}</small>
                         </p>

@@ -8,9 +8,9 @@
     @php use App\Support\LineList; @endphp
 
     @include('partials.page-hero', [
-        'title' => "Nos domaines d'intervention",
+        'title' => __('site.nos_domaines_d_intervention'),
         'text' => setting('domains_text'),
-        'crumb' => 'Nos domaines',
+        'crumb' => __('site.nos_domaines'),
     ])
 
     {{-- Chiffres clés et accès direct à chaque carte --}}

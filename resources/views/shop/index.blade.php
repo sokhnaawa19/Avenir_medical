@@ -5,9 +5,9 @@
 @section('content')
 
     @include('partials.page-hero', [
-        'title' => 'Boutique en ligne',
-        'text' => 'Choisissez vos produits, ajoutez-les au panier et commandez : nous vous livrons.',
-        'crumb' => 'Boutique',
+        'title' => __('site.boutique_en_ligne'),
+        'text' => __('site.choisissez_vos_produits_ajoutez_les_au_panie'),
+        'crumb' => __('site.boutique'),
     ])
 
     <section>

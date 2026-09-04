@@ -3,7 +3,7 @@
 @section('title', 'Page introuvable — '.setting('site_name'))
 
 @section('content')
-    @include('partials.page-hero', ['title' => 'Cette page n’existe pas'])
+    @include('partials.page-hero', ['title' => __('site.cette_page_nexiste_pas')])
 
     <section>
         <div class="wrap vide">

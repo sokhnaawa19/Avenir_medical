@@ -19,7 +19,7 @@ class Domain extends Model
     use Sortable;
 
     /** Champs proposés à la traduction. */
-    protected array $translatable = ['title', 'subtitle', 'intro', 'description'];
+    protected array $translatable = ['title', 'subtitle', 'intro', 'description', 'equipments'];
 
     protected string $slugSource = 'title';
 

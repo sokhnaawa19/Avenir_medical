@@ -4,14 +4,14 @@
 
 @section('content')
 
-    @include('partials.page-hero', ['title' => 'Créer mon compte', 'crumb' => 'Mon compte'])
+    @include('partials.page-hero', ['title' => __('site.creer_mon_compte'), 'crumb' => __('site.mon_compte')])
 
     <section>
         <div class="wrap" style="max-width:560px">
             @include('partials.flash')
 
             <div class="card">
-                <h3>@include('partials.icon', ['name' => 'sparkle']) Quelques informations et c’est prêt</h3>
+                <h3>@include('partials.icon', ['name' => 'sparkle']) {{ __('site.quelques_informations_et_cest_pret') }}</h3>
 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf

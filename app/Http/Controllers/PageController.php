@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agency;
 use App\Models\CompanyValue;
 use App\Models\Establishment;
 use App\Models\GalleryPhoto;
-use App\Models\Subsidiary;
 use App\Models\Training;
 use App\Models\Domain;
 use App\Models\Milestone;
@@ -20,7 +20,7 @@ class PageController extends Controller
     {
         return view('public.company', [
             'values' => CompanyValue::query()->active()->ordered()->get(),
-            'subsidiaries' => Subsidiary::query()->active()->ordered()->get(),
+            'agencies' => Agency::query()->active()->ordered()->get(),
             'milestones' => Milestone::query()->active()->ordered()->get(),
             'partners' => Partner::query()->active()->ordered()->get(),
         ]);
