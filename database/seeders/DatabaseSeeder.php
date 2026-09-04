@@ -24,6 +24,9 @@ class DatabaseSeeder extends Seeder
             TrainingsSeeder::class,
             ReferencesSeeder::class,
             GroupSeeder::class,
+
+            // En dernier : les images des contenus creees juste au-dessus.
+            SiteMediaSeeder::class,
         ]);
     }
 }

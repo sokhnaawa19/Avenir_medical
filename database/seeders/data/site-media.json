@@ -1,0 +1,433 @@
+{
+    "domains": {
+        "Ambulances médicalisées": {
+            "image": "domaines/47ea9c3f-4599-4411-952d-ddc5e03651e8.webp"
+        },
+        "Bloc opératoire, réanimation & néonatologie": {
+            "image": "domaines/20547475-fbee-4d10-957e-d2c81893a72d.webp"
+        },
+        "Imagerie médicale": {
+            "image": "domaines/f2c716fe-1b3b-406d-af69-18d6b30cf9a2.webp"
+        },
+        "Laboratoire d'analyses médicales": {
+            "image": "domaines/ddf9e1c0-b57c-463f-877f-d591c2fd0645.webp"
+        },
+        "Centre de dialyse": {
+            "image": "domaines/7f2dd659-20e9-464c-810f-8f65e5c928d3.webp"
+        },
+        "Mobiliers hospitaliers": {
+            "image": "domaines/a7ae7832-6b9c-42d8-a8d8-5ffc74cf290f.webp"
+        },
+        "Consommables biomédicaux": {
+            "image": "domaines/b3eee94b-92e6-4174-8455-e6e87f29a3a1.webp"
+        },
+        "Stérilisation et entretien": {
+            "image": "domaines/58edad66-df8b-4427-bed7-030204f9c77a.webp"
+        },
+        "Centrale à oxygène": {
+            "image": "domaines/a84a955d-7802-4997-ad97-1226b3168184.webp"
+        },
+        "Réfrigérateurs biomédicaux": {
+            "image": "domaines/7f4ca8df-15d5-4c9b-9a10-97e9effb6d72.webp"
+        },
+        "Endoscopie et chirurgie mini-invasive": {
+            "image": "domaines/0e1763be-463d-4bae-8cab-f021a3ead80f.webp"
+        }
+    },
+    "services": {
+        "Service après-vente": {
+            "image": "services/vIcVuCqg7C121qPnXk1CgbBXobBxwpTSuU64UuUa.jpg"
+        },
+        "Conseils & formation": {
+            "image": "services/1fd77ea2-80a1-4dad-88d4-2353cbf8b353.webp"
+        },
+        "Avenir Medical Consulting": {
+            "image": "services/862dd3a0-047a-40aa-bbac-738489db2d3b.webp"
+        },
+        "Projets clé en main": {
+            "image": "services/83b4674c-f0ca-45e1-bd19-880e2e7ee533.webp"
+        }
+    },
+    "posts": {
+        "Signature d'un protocole d'accord stratégique en Chine : une nouvelle étape pour le développement d'Avenir Medical": {
+            "image": "articles/9c879464-6e5a-478a-9765-77d23857d010.webp"
+        },
+        "Avenir Medical au SISDAK 2025 : une présence au cœur de l'innovation médicale au Sénégal": {
+            "image": "articles/a67b9206-a327-411b-a906-a3b89dec749a.webp"
+        },
+        "Avenir Médical : un accompagnement complet pour le pôle Mère-Enfant de Pikine, de l’installation à la maintenance": {
+            "image": "articles/yEhCIgY49mIHjXesz5eVuMIQxn7XEMutO6N9pmG5.jpg"
+        },
+        "Le Groupe Avenir Médical et SHINVA unissent leurs forces pour moderniser les infrastructures de santé en Afrique": {
+            "image": "articles/e748394a-58dd-4c45-842c-d2bf4c2f4b97.webp"
+        },
+        "Avenir Médical au 12e Congrès de la Société Sénégalaise de Pédiatrie": {
+            "image": "articles/81b356e7-2676-41cc-b0ba-234bac2d4105.webp"
+        },
+        "Avenir Médical à Arab Health 2026 : au cœur de l’innovation médicale internationale": {
+            "image": "articles/0090d31b-c8a7-43b6-92c4-c6462a8407c6.webp"
+        }
+    },
+    "trainings": {
+        "Automates d'analyses — formation RANDOX": {
+            "image": "formations/randox-3.webp"
+        },
+        "Imagerie médicale — formation CANON": {
+            "image": "formations/canon-dakar.webp"
+        },
+        "Blanchisserie hospitalière — formation FAGOR": {
+            "image": "formations/fagor-2.webp"
+        }
+    },
+    "products": {
+        "Seringue 5 ml": {
+            "image": "produits/8f3eb931-2cd3-4d4e-ad21-9916220e61d1.webp"
+        },
+        "Seringue 10 ml": {
+            "image": "produits/791c98ee-d498-4134-a329-11d8101a338c.webp"
+        },
+        "Seringue 50/60 ml": {
+            "image": "produits/e596a0a5-8b47-4599-b907-0902512b4b53.webp"
+        },
+        "Seringue à insuline 1 ml": {
+            "image": "produits/a3b638ac-6fd5-44a1-8b7c-12f8028c48cd.webp"
+        },
+        "Cathéter gris 16G": {
+            "image": "produits/dise-catheter-gris-16g.webp"
+        },
+        "Cathéter vert 18G": {
+            "image": "produits/dise-catheter-vert-18g.webp"
+        },
+        "Cathéter rose 20G": {
+            "image": "produits/dise-catheter-rose-20g.webp"
+        },
+        "Cathéter bleu 22G": {
+            "image": "produits/dise-catheter-bleu-22g.webp"
+        },
+        "Robinet 3 voies": {
+            "image": "produits/dise-robinet-3-voies.webp"
+        },
+        "Aiguille spinale 20G": {
+            "image": "produits/59818805-84f6-4d57-bcc5-7fb86c6bc754.webp"
+        },
+        "Aiguille spinale 22G": {
+            "image": "produits/e37c468b-dac9-48dd-bc72-d4b7d5d9b930.webp"
+        },
+        "Aiguille spinale 25G": {
+            "image": "produits/8e7b3434-157d-458a-8e64-b2c8a8175a15.webp"
+        },
+        "Aiguille spinale 26G": {
+            "image": "produits/d3a205fa-bf93-4640-a30e-3ff8a0577026.webp"
+        },
+        "Lame de scalpel n° 11": {
+            "image": "produits/14bcd667-bb03-4be6-a2d2-d41d804abef6.webp"
+        },
+        "Lame de scalpel n° 12": {
+            "image": "produits/4168b528-b47b-41a8-9513-1b572ede80a8.webp"
+        },
+        "Lame de scalpel n° 20": {
+            "image": "produits/e1b8f202-67f8-40c8-9007-c1c35a2e1e9d.webp"
+        },
+        "Lame de scalpel n° 22": {
+            "image": "produits/1e372c64-4c42-42f5-97a2-6905c9bda013.webp"
+        },
+        "Sonde de Foley 2 voies CH 8": {
+            "image": "produits/8da72655-f461-45e3-bcf1-924c5616962f.webp"
+        },
+        "Sonde de Foley 2 voies CH 10": {
+            "image": "produits/3b81fd8c-3622-4186-a6f1-23698db737f6.webp"
+        },
+        "Sonde de Foley 2 voies CH 12": {
+            "image": "produits/2fc84ea7-306c-412e-b486-34ba09d753bf.webp"
+        },
+        "Sonde de Foley 2 voies CH 14": {
+            "image": "produits/fc54f9bb-52a5-4f41-9932-770b1c667230.webp"
+        },
+        "Sonde de Foley 2 voies CH 16": {
+            "image": "produits/97c11d0c-890a-4861-8850-c72c39a0842d.webp"
+        },
+        "Sonde de Foley 2 voies CH 18": {
+            "image": "produits/993da349-8e63-4fd6-8e8d-dcfbd9bd4b43.webp"
+        },
+        "Sonde de Foley 2 voies CH 20": {
+            "image": "produits/2e91c11e-2a7c-4742-980a-228886c5ccae.webp"
+        },
+        "Sonde de Foley 2 voies CH 22": {
+            "image": "produits/72dc46e3-6d22-4e6c-b4ce-7bb5debeb596.webp"
+        },
+        "Bonnet jetable non tissé": {
+            "image": "produits/97d13fc6-0dea-4a9d-9685-a64ecc4d9f9c.webp"
+        },
+        "Couvre-chaussures PE": {
+            "image": "produits/bb6ed174-cb9f-401b-9bff-e0443559569a.webp"
+        },
+        "Kit de champs universel": {
+            "image": "produits/0a0a9126-68c6-4a45-b121-91b2581712a9.webp"
+        },
+        "Blouse chirurgicale XL": {
+            "image": "produits/a9952ef9-7a11-4bd1-aac5-68f5204ddd7c.webp"
+        },
+        "Masque KN95": {
+            "image": "produits/ca09399f-f062-4795-81f0-2e65aa5613b6.webp"
+        },
+        "Bandage élastique 15 cm × 4,5 m": {
+            "image": "produits/dise-bandage-elastique.webp"
+        },
+        "Compresses de gaze stériles 10 × 10": {
+            "image": "produits/dise-compresses-10x10.webp"
+        },
+        "Compresses de gaze stériles 5 × 5": {
+            "image": "produits/dise-compresses-5x5.webp"
+        },
+        "Bande de gaze 10 cm × 5 m": {
+            "image": "produits/c91b00a5-0a07-4666-8715-f4e04123a1a4.webp"
+        },
+        "Bande de gaze 5 cm × 5 m": {
+            "image": "produits/4d6e3913-ca54-4ecc-b005-41861a099f5e.webp"
+        },
+        "Rouleau de coton 1 000 g": {
+            "image": "produits/dise-rouleau-coton.webp"
+        },
+        "Tube jaune SST (gel séparateur)": {
+            "image": "produits/dise-tube-sst.webp"
+        },
+        "Tube gris (fluorure / oxalate)": {
+            "image": "produits/dise-tube-gris.webp"
+        },
+        "Tube EDTA (lavande)": {
+            "image": "produits/dise-tube-edta.webp"
+        },
+        "Canule de Guedel n° 1": {
+            "image": "produits/818fe83b-ea4d-4087-84d1-e4cd60a30c3a.webp"
+        },
+        "Canule de Guedel n° 2": {
+            "image": "produits/edd64b96-6dfc-4c77-a00e-5a8b71141f82.webp"
+        },
+        "Canule de Guedel n° 3": {
+            "image": "produits/b8e31130-e290-40f3-8cea-e97f08ef7cb9.webp"
+        },
+        "Canule de Guedel n° 4": {
+            "image": "produits/55cd641d-5b39-41dc-91ea-23f7b7ec0086.webp"
+        },
+        "Canule de Guedel n° 5": {
+            "image": "produits/4e56c235-3020-4e38-847e-a98f1251ecc1.webp"
+        },
+        "Canule de Guedel n° 6": {
+            "image": "produits/a8f7a594-906d-4f48-b6f7-364cccbb5574.webp"
+        },
+        "Sonde de Yankauer 12 CH": {
+            "image": "produits/0b3be435-2f35-40dd-a5f0-10a521ecd859.webp"
+        },
+        "Sonde de Yankauer 18 CH": {
+            "image": "produits/f5ecdfdd-3377-4686-ad6c-efda339dff82.webp"
+        },
+        "Aspirateur manuel de mucosités": {
+            "image": "produits/00cc4daa-d1e6-4926-8b35-19f8436b236c.webp"
+        },
+        "Aspirateur électrique de mucosités": {
+            "image": "produits/d990e4ae-6f8c-470d-a57a-614652b66180.webp"
+        },
+        "Tube de trachéotomie": {
+            "image": "produits/dise-tube-tracheotomie.webp"
+        },
+        "Sonde endotrachéale à ballonnet": {
+            "image": "produits/687a77be-01d7-4735-b989-68eed6dff545.webp"
+        },
+        "Gants nitrile S / M / L": {
+            "image": "produits/aaa64d50-84b4-4c5f-8dc9-3bff75eb09ff.webp"
+        },
+        "Gants chirurgicaux latex 6.5 / 7": {
+            "image": "produits/04ba1813-0f42-44aa-a1a0-93b798c21a3b.webp"
+        },
+        "Nébuliseur": {
+            "image": "produits/7947e7fd-d79f-4c1f-b84d-6705030d829b.webp"
+        },
+        "Boîte de sécurité pour seringues 5 L": {
+            "image": "produits/d5a229cb-7dcd-42d6-9ee4-e6fac2cc6a63.webp"
+        },
+        "Abaisse-langue enfant": {
+            "image": "produits/85a8b05d-9f6f-45c4-bf53-874684e76cd9.webp"
+        },
+        "Abaisse-langue adulte": {
+            "image": "produits/2670139b-9e8f-4455-865c-6d3163d25d8c.webp"
+        },
+        "Urinoir plastique homme 1 L": {
+            "image": "produits/f650e79e-f3bf-4ebc-b731-47b094241066.webp"
+        },
+        "Lames porte-objet 76 × 26 mm": {
+            "image": "produits/dise-lame-porte-objet.webp"
+        },
+        "Lamelles couvre-objet 22 × 22 mm": {
+            "image": "produits/dise-lamelle-couvre-objet.webp"
+        },
+        "Film échographique 110 mm × 20 m": {
+            "image": "produits/dise-film-echographique.webp"
+        },
+        "Papier ECG thermique": {
+            "image": "produits/dise-papier-ecg.webp"
+        }
+    },
+    "partners": {
+        "Canon": {
+            "logo": "partenaires/95de35d2-db92-49b8-8ca0-925550983fea.webp"
+        },
+        "Comen": {
+            "logo": "partenaires/bf9603ab-39ca-492e-946b-cbeb39eec09d.webp"
+        },
+        "Dialife SA": {
+            "logo": "partenaires/5412e1d7-cf2b-4d77-86fd-8cc70c5603da.webp"
+        },
+        "EDAN Instruments": {
+            "logo": "partenaires/e6199996-ccce-420c-a319-39898a207334.webp"
+        },
+        "Foyomed": {
+            "logo": "partenaires/c4439da1-c0e4-4bdb-b67e-a0a33d752b81.webp"
+        },
+        "Holtex": {
+            "logo": "partenaires/b9f4bce6-ee2e-48c8-a6a9-bd62f8ab0e07.webp"
+        },
+        "Nitrocare": {
+            "logo": "partenaires/a40067e6-fd84-4b12-b237-7451fb46776a.webp"
+        },
+        "PHCbi": {
+            "logo": "partenaires/d528efc0-ca91-4c41-bf08-000922f79411.webp"
+        },
+        "Saniswiss SA": {
+            "logo": "partenaires/e76c78da-aa24-4cf7-a615-d5e56b66e6fc.webp"
+        },
+        "Tosoh Corporation": {
+            "logo": "partenaires/0250feb7-0de6-48cd-a01b-2bf3e817d7b2.webp"
+        },
+        "Ultra-Controlo": {
+            "logo": "partenaires/ce388b44-4eb6-4f7e-bff9-a30d98ac5c40.webp"
+        },
+        "Vila Sistemi Medical": {
+            "logo": "partenaires/bb561ac2-26b1-4cc5-8160-475737aa20f6.webp"
+        },
+        "Esse3 Medical": {
+            "logo": "partenaires/93520533-c2ee-447c-b920-49a5a98d275d.webp"
+        },
+        "ABRONN": {
+            "logo": "partenaires/95865cd2-d814-40bd-85a8-cd9683e7c3c6.webp"
+        },
+        "Fagor": {
+            "logo": "partenaires/f5860596-34fe-4229-b619-12798485e5a3.webp"
+        },
+        "Fiocchetti": {
+            "logo": "partenaires/39cfebaa-bb09-4526-a132-4e657aefa230.webp"
+        },
+        "Boule Diagnostics": {
+            "logo": "partenaires/2961a894-a4b9-4390-a54c-1f8cf2e60d87.webp"
+        },
+        "Saikang Medical": {
+            "logo": "partenaires/1bd6475f-b8dd-4e9b-9b88-139f1f07b4bd.webp"
+        },
+        "Autobio Diagnostics": {
+            "logo": "partenaires/cd276e97-a657-49a4-a0b8-2ff5b9422856.webp"
+        },
+        "Sunbio": {
+            "logo": "partenaires/368b4151-1cf3-4dec-8f42-6ea04094f52d.webp"
+        },
+        "Delcon": {
+            "logo": "partenaires/ad4c09b4-2460-49b7-888f-6556a6cc0b30.webp"
+        },
+        "LMB Technologie": {
+            "logo": "partenaires/8484bf4b-e291-4e3f-860d-2228161481d4.webp"
+        },
+        "Zenith Lab": {
+            "logo": "partenaires/a0a2b7bb-30db-487f-b9f2-24b8ca2d29f3.webp"
+        },
+        "Formed Surgical Instruments": {
+            "logo": "partenaires/ca466b79-518a-4119-8fb7-f7201ad421a3.webp"
+        },
+        "HugeMed": {
+            "logo": "partenaires/13ae233b-2556-435b-abb7-e82f890407b7.webp"
+        },
+        "RANDOX": {
+            "logo": "partenaires/f88642e7-e627-4807-91bb-99130ed49c3c.webp"
+        },
+        "DISE": {
+            "logo": "partenaires/93ccd889-8514-4800-800c-3f556d8b5c4d.webp"
+        },
+        "Shinva": {
+            "logo": "partenaires/8ba976ce-b4c3-47d1-8905-201cca50c5de.webp"
+        }
+    },
+    "establishments": {
+        "Ministère de la Santé et de l'Hygiène Publique": {
+            "logo": "references/d8fa8048-6d33-4695-aefc-15358bc97917.webp"
+        },
+        "DEM — Direction des Équipements et de la Maintenance": {
+            "logo": "references/0ba17e7d-9710-468e-85d6-5d190537bffd.webp"
+        },
+        "REDISSE": {
+            "logo": "references/9ec947b7-9435-4f35-b2ad-b8625b1f6a09.webp"
+        },
+        "ENABEL": {
+            "logo": "references/4613a33b-d6d6-4739-b76e-219605af5fb8.webp"
+        },
+        "FNSS — Fondation Nationale Sénégal Solidaire": {
+            "logo": "references/f070cfc7-18cb-47b7-9224-49fc174440ba.webp"
+        },
+        "Hôpital de Pikine": {
+            "logo": "references/029b515d-39ec-4272-bf8a-548666131832.webp",
+            "image": "references/NgXOE9y0BUwjUVtDihU1HQSBaycji2HhTfi0EqPo.jpg"
+        },
+        "IHS — Institut d'Hygiène Sociale": {
+            "logo": "references/9e608eef-5788-474a-a1ee-d5f5cbbad141.webp"
+        },
+        "Hôpital Abass Ndao": {
+            "logo": "references/04df3947-7f50-47fa-8ab7-9de9459c8c5d.webp"
+        },
+        "Hôpital HOGIP": {
+            "logo": "references/4ee211a6-31a4-4d01-b203-bb3f352df567.webp"
+        },
+        "Hôpital Albert Royer": {
+            "logo": "references/86da3fd2-af07-4125-9c57-5a38fd230ac9.webp"
+        },
+        "Hôpital des Enfants de Diamniadio": {
+            "logo": "references/c717a75d-109e-4a9d-a01d-b0feaefa5869.webp"
+        },
+        "Hôpital Dalal Jamm": {
+            "logo": "references/620f4e79-ef10-4689-99fc-92f76990b088.webp"
+        },
+        "Hôpital Cheikhoul Khadim de Touba": {
+            "logo": "references/c4f7936d-a6f2-4485-a9db-4cd77c577468.webp"
+        },
+        "Hôpital Ndamatou": {
+            "logo": "references/41016a10-73b6-4653-9ad4-c83f28774c37.webp"
+        },
+        "Hôpital Mame Abdou Aziz": {
+            "logo": "references/e3bc089d-4ad8-4af0-b953-5f7d7b3aef6d.webp"
+        },
+        "Hôpital Saint Jean de Dieu": {
+            "logo": "references/04e62bab-4130-4b10-bf8e-e2da89972c6a.webp"
+        },
+        "Clinique Cheikhoul Khadim": {
+            "logo": "references/6c7227be-95da-4232-b0d0-4774e0f7d4c1.webp"
+        },
+        "Santé 24": {
+            "logo": "references/b7f770c6-8c15-4e3b-b1bd-43c8b6582c53.webp"
+        },
+        "Clinique Cheikh Mouhamadou Bachir Mbacké": {
+            "logo": "references/3a219ae8-e518-425c-ac7e-e3af57a1ac2f.webp"
+        },
+        "Centre de Santé des Maristes": {
+            "logo": "references/a2fec34b-37db-40fc-ac44-4223bb14e3ef.webp"
+        },
+        "Centre de Santé de Keur Massar": {
+            "logo": "references/754224e9-19b0-4a31-960f-d9eee4a8a7d5.webp"
+        },
+        "Centre de Santé de Sangalkam": {
+            "logo": "references/2e74ce32-4bd9-4870-a07f-a1cbfd306b19.webp"
+        },
+        "Centre de Santé de Popenguine": {
+            "logo": "references/3a91551a-bf85-40ae-b77f-0f51c804b2b6.webp"
+        }
+    },
+    "subsidiaries": {
+        "DISE CARE PHARMA": {
+            "logo": "groupe/7238fb7e-6271-4849-b2c9-37fffd3b3d4f.webp"
+        }
+    }
+}
