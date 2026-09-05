@@ -2,7 +2,7 @@ FROM richarvey/nginx-php-fpm:3.1.6
 
 COPY . .
 
-# Configuration de l'image (build/installation)
+# Configuration de l'image
 ENV SKIP_COMPOSER=1
 ENV WEBROOT=/var/www/html/public
 ENV PHP_ERRORS_STDERR=1
@@ -18,7 +18,12 @@ ENV LOG_CHANNEL=stderr
 # Base de données PostgreSQL persistante (fournie par Render)
 ENV DB_CONNECTION=pgsql
 
-# Migrations + seeders relancés à chaque démarrage du conteneur
-# (idempotent grâce à firstOrCreate — ne duplique rien si déjà peuplé)
+# Les dépendances sont installées ICI, pendant la construction de l'image,
+# et non plus à chaque démarrage. Le réveil du service après une mise en
+# veille passe ainsi de plus d'une minute à quelques secondes — ce qui
+# compte quand un client teste le site sur plusieurs jours.
+RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+# Migrations au démarrage ; les seeders ne se relancent que si la base est vide.
 RUN chmod +x docker-entrypoint.sh
 CMD ["./docker-entrypoint.sh"]
